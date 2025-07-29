@@ -5,6 +5,23 @@ export function Articles() {
   return (
     <section className="articles">
       <h1>Tech Articles</h1>
+      <div className="articles-container">
+        {articleListData.map((val, idx) => {
+          return (
+            <a
+              href="/install-wsl"
+              target="_blank"
+              className="article-card"
+              key={idx}
+            >
+              <div className="content-wrapper">
+                <h1 className="title">{val.title}</h1>
+                <h2 className="subtitle">{val.subtitle}</h2>
+              </div>
+            </a>
+          );
+        })}
+      </div>
     </section>
   );
 }
