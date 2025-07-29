@@ -22,4 +22,16 @@ All commands are run from the root of the project, from a terminal:
 
 ## 👀 Want to learn more?
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Feel free to check [Astro documentation](https://docs.astro.build) or jump into Astro [Discord server](https://astro.build/chat).
+
+## VSCode prettier issue
+
+add this code on settings.json:
+
+```
+  "[astro]": {
+    "editor.defaultFormatter": "astro-build.astro-vscode"
+  }
+```
+
+source https://github.com/prettier/prettier-vscode/issues/3247
