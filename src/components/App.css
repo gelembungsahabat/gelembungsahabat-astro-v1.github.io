@@ -1,0 +1,239 @@
+:root {
+  --bg-color: #282b30;
+  --pd-left: 5rem;
+  --bold: 600;
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/*-------------------------------------
+  2. Responsive Breakpoints
+--------------------------------------*/
+
+/* ≥ 320px: mobile size */
+@media (min-width: 320px) {
+  .flex-container {
+    flex-direction: column;
+  }
+
+  .card {
+    width: 7rem;
+    height: 7rem;
+    border-radius: 5px;
+    margin: 0.3rem 0;
+  }
+
+  .card-title {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.7rem;
+  }
+
+  .card-container {
+    flex-direction: row;
+  }
+}
+
+/* ≥ 1024px: Laptop */
+@media (min-width: 1024px) {
+  /* Laptop styles */
+  .card {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 5px;
+    margin: 0.3rem 0;
+  }
+
+  .card-title {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+  }
+
+  .card-container {
+    flex-direction: column;
+  }
+}
+
+/* ≥ 1440px: PC Screens */
+@media (min-width: 1440px) {
+  /* PC styles */
+  .card {
+    width: 17rem;
+    height: 17rem;
+    border-radius: 5px;
+    margin: 0.3rem 0;
+  }
+
+  .card-title {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.5rem;
+  }
+}
+
+/* homepage div */
+.homepage {
+  text-align: left;
+  vertical-align: middle;
+  background-color: var(--bg-color);
+  overflow-y: hidden;
+  height: 100vh;
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+  touch-action: none;
+}
+
+.icon {
+  margin: 1rem 0;
+  size: 2rem;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1rem 0 1rem var(--pd-left);
+}
+
+.warning-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  background-color: rgba(255, 97, 97, 0.1);
+  color: rgba(255, 97, 97);
+  border-radius: 10px;
+  padding: 0 1rem;
+  width: 19rem;
+}
+
+/* CARD STUFF */
+.card-container {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 2rem;
+}
+
+.anime-card-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  border-color: grey;
+  border-radius: 10px;
+  box-shadow: 2px 4px 8px 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition-duration: 300ms;
+  margin: 1rem 0;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  transition-duration: 300ms;
+}
+
+.card-title-container {
+  padding: 0.5rem;
+  align-self: flex-end;
+  width: 100%;
+  height: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  background: linear-gradient(to bottom, transparent 0%, #1e2124 100%);
+}
+
+.card-title {
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1;
+  font-weight: 600;
+  text-shadow: 0 0 5px black, 0 0 10px black, 0 0 20px black, 0 0 40px black,
+    0 0 80px black;
+}
+
+/* BG IMAGE STUFF */
+.has-bg-img {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.anime-recommendation-img {
+  background-image: url("/images/rin.png");
+}
+
+.fun-things-img {
+  background-image: url("/images/cloud-minichocobo.png");
+}
+
+.project-list-img {
+  background-image: url("/images/github-repo.png");
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  margin: 1rem 0;
+  /* font-weight better from 600-700 for text that want to emphasize */
+  font-weight: var(--bold);
+  font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+}
+
+h2 {
+  opacity: 70%;
+  /* font-weight better from 400-500 for normal text */
+  font-weight: 400;
+  margin: 1rem 0;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Nunito", sans-serif;
+  background-color: var(--bg-color);
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
