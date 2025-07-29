@@ -7,5 +7,4 @@ import react from "@astrojs/react";
 export default defineConfig({
   integrations: [react()],
   site: "https://gelembungsahabat.github.io",
-  base: "github-astro",
 });
