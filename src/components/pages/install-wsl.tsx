@@ -1,3 +1,7 @@
 export function InstallWSL() {
-  return <div>Install WSL</div>;
+  return (
+    <div>
+      <h1>Install WSL</h1>
+    </div>
+  );
 }
