@@ -1,5 +1,4 @@
 :root {
-  --bg-color: #282b30;
   --pd-left: 5rem;
   --bold: 600;
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -81,7 +80,6 @@
 .homepage {
   text-align: left;
   vertical-align: middle;
-  background-color: var(--bg-color);
   overflow-y: hidden;
   height: 100vh;
   -ms-overflow-style: none; /* Internet Explorer 10+ */
@@ -203,7 +201,6 @@ body {
   padding: 0;
   margin: 0;
   font-family: "Nunito", sans-serif;
-  background-color: var(--bg-color);
 }
 
 button {
