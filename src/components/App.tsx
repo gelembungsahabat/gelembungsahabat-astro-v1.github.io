@@ -26,10 +26,11 @@ function App() {
   const handleTouchEnd = (e: React.TouchEvent<HTMLDivElement>) => {
     const endScreenY = e.changedTouches[0].screenY;
     const startScreenY = startScreenYRef.current;
-    if (startScreenY < endScreenY && currentSectionIndex >= 1) {
+    const touchScreenDiff = startScreenY - endScreenY;
+    if (touchScreenDiff < -200 && currentSectionIndex >= 1) {
       setCurrentSectionIndex((prevState) => prevState - 1);
     }
-    if (startScreenY > endScreenY && currentSectionIndex < maxSectionIndex) {
+    if (touchScreenDiff > 200 && currentSectionIndex < maxSectionIndex) {
       setCurrentSectionIndex((prevState) => prevState + 1);
     }
   };
