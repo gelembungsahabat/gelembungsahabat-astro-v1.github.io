@@ -1,8 +1,8 @@
 import "./styles/article.css";
-export function InstallWSLArticle() {
+export function GitSetupArticle() {
   return (
     <div className="content-wrapper">
-      <h1>Install WSL</h1>
+      <h1>Git Setup</h1>
       <p>
         Now developers can access the power of both Windows and Linux at the
         same time on a Windows machine. The Windows Subsystem for Linux (WSL)

@@ -9,7 +9,7 @@ export function Articles() {
         {articleListData.map((val, idx) => {
           return (
             <a
-              href="/install-wsl"
+              href={val.href}
               target="_blank"
               className="article-card"
               key={idx}
