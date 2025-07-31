@@ -10,7 +10,7 @@ export function Hero(props: { setCurrentSection: (section: number) => void }) {
           <h2>Welcome to my personal blog!</h2>
         </div>
         <div className="card-container">
-          <a
+          <span
             className="card has-bg-img anime-recommendation-img"
             onClick={() => setCurrentSection(1)}
             tabIndex={0}
@@ -18,8 +18,8 @@ export function Hero(props: { setCurrentSection: (section: number) => void }) {
             <div className="card-title-container">
               <span className="card-title">Anime Recommendation</span>
             </div>
-          </a>
-          <a
+          </span>
+          <span
             className="card has-bg-img fun-things-img"
             onClick={() => setCurrentSection(2)}
             tabIndex={0}
@@ -27,15 +27,15 @@ export function Hero(props: { setCurrentSection: (section: number) => void }) {
             <div className="card-title-container">
               <span className="card-title">Hiragana Quiz</span>
             </div>
-          </a>
-          <a
+          </span>
+          <span
             onClick={() => setCurrentSection(3)}
             className="card has-bg-img project-list-img"
           >
             <div className="card-title-container">
               <span className="card-title">Tech Articles</span>
             </div>
-          </a>
+          </span>
         </div>
       </div>
     </section>
