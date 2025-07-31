@@ -1,4 +1,5 @@
 import "./styles/article.css";
+import { CodeBlock } from "../code-block";
 export function GitSetupArticle() {
   return (
     <div className="content-wrapper">
@@ -18,6 +19,12 @@ export function GitSetupArticle() {
         After installing your Git locally, you can setup global name and email
         from your github or gitlab account to store your code on them.
       </p>
+      <CodeBlock consoleName="Terminal / Powershell">
+        <>
+          git config --global user.email wildan@company.ccc <br />
+          git config --global user.name 'wildan'
+        </>
+      </CodeBlock>
     </div>
   );
 }
