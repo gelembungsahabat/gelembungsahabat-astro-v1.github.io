@@ -1,4 +1,5 @@
 import "./styles/article.css";
+import { CodeBlock } from "../code-block";
 export function InstallWSLArticle() {
   return (
     <div className="content-wrapper">
@@ -27,10 +28,13 @@ export function InstallWSLArticle() {
       <p>
         You can now install everything you need to run WSL with a single
         command. Open PowerShell or Windows Command Prompt in administrator mode
-        by right-clicking and selecting "Run as administrator", enter the
+        by right-clicking and selecting "Run as administrator", enter this below
+        command, then restart your machine.
         <br />
-        <code>wsl --install</code> command, then restart your machine.
-        <br /> <br />
+        <CodeBlock consoleName="Powershell">
+          <code>wsl --install</code>
+        </CodeBlock>
+        <br />
         This command will enable the features necessary to run WSL and install
         the Ubuntu distribution of Linux. (This default distribution can be
         changed).
