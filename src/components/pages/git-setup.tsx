@@ -29,8 +29,19 @@ export function GitSetupArticle() {
           git config --global user.name 'your name'
         </>
       </CodeBlock>
-      Next, you can create repository on your github / gitlab account, then set
-      your remote repository
+      Next, you can create repository on your github / gitlab account, then
+      inside your Project Directory, run this command below:
+      <CodeBlock consoleName="Terminal">
+        <>
+          cd &#123;your-project-directory&#125; <br />
+          git init git add README.md git commit -m "first commit" <br />
+          git branch -M main <br />
+          git remote add origin
+          git@github.com:&#123;your-name&#125;/&#123;your-repository&#125;.git{" "}
+          <br />
+          git push -u origin main
+        </>
+      </CodeBlock>
     </div>
   );
 }
