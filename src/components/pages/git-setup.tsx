@@ -10,21 +10,27 @@ export function GitSetupArticle() {
       </p>
       <h2>Install Git</h2>
       <p>
-        You can go to terminal (on linux) or cmd (with wsl), and run this
+        You can go to terminal (on linux or windows with wsl), and run this
         command:{" "}
       </p>
-      <code>sudo apt install git</code>
+      <CodeBlock consoleName="Terminal">
+        <code>sudo apt install git</code>
+      </CodeBlock>
       <h2>What's next?</h2>
       <p>
-        After installing your Git locally, you can setup global name and email
-        from your github or gitlab account to store your code on them.
+        After installing your Git locally, we need to integrate our local git to
+        <code> remote git</code> (like github, bitbucket, gitlab, etc.). Before
+        that, you can setup <code>git global name and email</code> from your
+        remote git account to identify who is it.
       </p>
-      <CodeBlock consoleName="Terminal / Powershell">
+      <CodeBlock consoleName="Terminal">
         <>
-          git config --global user.email wildan@company.ccc <br />
-          git config --global user.name 'wildan'
+          git config --global user.email your-email@company.ccc <br />
+          git config --global user.name 'your name'
         </>
       </CodeBlock>
+      Next, you can create repository on your github / gitlab account, then set
+      your remote repository
     </div>
   );
 }
