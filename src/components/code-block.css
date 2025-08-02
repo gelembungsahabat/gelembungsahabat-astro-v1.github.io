@@ -1,4 +1,15 @@
+.code-block-head {
+  background-color: gray;
+  font-size: small;
+  padding: 0.3rem;
+}
+
+.code-block-content {
+  margin: 1rem;
+}
+
 .code-block {
-  border: thin solid white;
+  border: thin solid gray;
   display: flex;
+  flex-direction: column;
 }

@@ -8,10 +8,9 @@ interface CodeBarData {
 
 export const CodeBlock = (props: CodeBarData) => {
   return (
-    <div className="code-bar">
-      {props.consoleName}
-      <br />
-      {props.children}
+    <div className="code-block">
+      <div className="code-block-head">{props.consoleName}</div>
+      <code className="code-block-content">{props.children}</code>
     </div>
   );
 };
