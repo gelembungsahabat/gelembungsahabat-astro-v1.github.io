@@ -30,7 +30,8 @@ export function GitSetupArticle() {
         </>
       </CodeBlock>
       Next, you can create repository on your github / gitlab account, then
-      inside your Project Directory, run this command below:
+      inside your Project Directory, run this command below (do NOT include
+      these curly branches):
       <CodeBlock consoleName="Terminal">
         <>
           cd &#123;your-project-directory&#125; <br />
@@ -42,6 +43,10 @@ export function GitSetupArticle() {
           git push -u origin main
         </>
       </CodeBlock>
+      Make sure you've already set SSH up to your github or gitlab account. I'll
+      make that article soon, so stay tune! :D
+      <h2>That's it</h2>
+      you've already set your local git with your local machine
     </div>
   );
 }
