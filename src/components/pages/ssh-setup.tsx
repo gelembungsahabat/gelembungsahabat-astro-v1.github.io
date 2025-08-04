@@ -18,6 +18,16 @@ export function SSHSetupArticle() {
         <code>ssh keygen</code>
       </CodeBlock>
       <h2>What's next?</h2>
+      You can look at their documentation about setting these up on{" "}
+      <a href="https://docs.github.com/en/enterprise-cloud@latest/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account">
+        github docs{" "}
+      </a>
+      or{" "}
+      <a href="https://docs.gitlab.com/user/ssh/#add-an-ssh-key-to-your-gitlab-account">
+        {" "}
+        gitlab docs
+      </a>
+      , because something will changed along with time.
     </div>
   );
 }
