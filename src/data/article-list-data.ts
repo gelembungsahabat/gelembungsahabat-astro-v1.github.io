@@ -13,6 +13,12 @@ export const articleListData: ArticleListData[] = [
     href: "/install-wsl",
   },
   {
+    title: "Setup SSH",
+    subtitle: "Tutorial about Setup SSH for Git remote",
+    imgUrl: "/images/opm.jpg",
+    href: "/ssh-setup",
+  },
+  {
     title: "Setup Git",
     subtitle: "Tutorial about Setup Git for development",
     imgUrl: "/images/opm.jpg",
