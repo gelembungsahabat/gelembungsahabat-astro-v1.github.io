@@ -19,21 +19,21 @@ export const articleListData: ArticleListData[] = [
     href: "/git-setup",
   },
   {
-    title: "Static site with ReactJS",
-    subtitle: "We will learn how to make static site with ReactJS",
+    title: "CS2 Tips",
+    subtitle: "Counter Strike 2 tips for beginner",
     imgUrl: "/images/opm.jpg",
-    href: "/install-wsl",
+    href: "/cs2-tips",
   },
   {
-    title: "Basic Image Processing",
-    subtitle: "Basic image processing with image thresholding",
+    title: "Basic Aseprite (for pixel art)",
+    subtitle: "Basic Aseprite for you that interest for pixel art",
     imgUrl: "/images/opm.jpg",
-    href: "/install-wsl",
+    href: "/aseprite",
   },
   {
     title: "HTMX 101",
     subtitle: "We can learn how tf this thing works",
     imgUrl: "/images/opm.jpg",
-    href: "/install-wsl",
+    href: "/htmx",
   },
 ];
