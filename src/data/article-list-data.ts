@@ -19,6 +19,18 @@ export const articleListData: ArticleListData[] = [
     href: "/git-setup",
   },
   {
+    title: "Basic Aeromodelling",
+    subtitle: "Aeromodelling in a nutshell",
+    imgUrl: "/images/opm.jpg",
+    href: "/basic-aeromodelling",
+  },
+  {
+    title: "Anime Drawing",
+    subtitle: "Anime drawing tips",
+    imgUrl: "/images/opm.jpg",
+    href: "/anime-drawing",
+  },
+  {
     title: "CS2 Tips",
     subtitle: "Counter Strike 2 tips for beginner",
     imgUrl: "/images/opm.jpg",
