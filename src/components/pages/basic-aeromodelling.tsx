@@ -1,5 +1,4 @@
 import "./styles/article.css";
-import { CodeBlock } from "../code-block";
 export function BasicAeromodellingArticle() {
   return (
     <div className="content-wrapper">
@@ -51,7 +50,10 @@ export function BasicAeromodellingArticle() {
         </ul>
         <br />
         <h3>- Movement</h3>
-        <img src="images/pitch-roll-yaw.gif" alt="pitch-roll-yaw" />
+        <img
+          src="https://howthingsfly.si.edu/sites/default/files/2020-06/pitch-roll-yaw_0.gif"
+          alt="pitch-roll-yaw"
+        />
         <br />
         Gif source:{" "}
         <a href="https://howthingsfly.si.edu/media/roll-pitch-yaw">
