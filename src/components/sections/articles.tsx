@@ -4,7 +4,7 @@ import { articleListData } from "../../data";
 export function Articles() {
   return (
     <section className="articles">
-      <h1>Tech Articles</h1>
+      <h1>Fun Articles</h1>
       <div className="articles-container">
         {articleListData.map((val, idx) => {
           return (

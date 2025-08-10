@@ -33,7 +33,7 @@ export function Hero(props: { setCurrentSection: (section: number) => void }) {
             className="card has-bg-img project-list-img"
           >
             <div className="card-title-container">
-              <span className="card-title">Tech Articles</span>
+              <span className="card-title">Fun Articles</span>
             </div>
           </span>
         </div>

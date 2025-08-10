@@ -7,6 +7,12 @@ export type ArticleListData = {
 
 export const articleListData: ArticleListData[] = [
   {
+    title: "Basic Aeromodelling",
+    subtitle: "Aeromodelling in a nutshell",
+    imgUrl: "/images/opm.jpg",
+    href: "/basic-aeromodelling",
+  },
+  {
     title: "install WSL for Windows",
     subtitle: "Tutorial about install WSL (Windows Subsystem Linux)",
     imgUrl: "/images/opm.jpg",
@@ -23,12 +29,6 @@ export const articleListData: ArticleListData[] = [
     subtitle: "Tutorial about Setup Git for development",
     imgUrl: "/images/opm.jpg",
     href: "/git-setup",
-  },
-  {
-    title: "Basic Aeromodelling",
-    subtitle: "Aeromodelling in a nutshell",
-    imgUrl: "/images/opm.jpg",
-    href: "/basic-aeromodelling",
   },
   {
     title: "Anime Drawing",
