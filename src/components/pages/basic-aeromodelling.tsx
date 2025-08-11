@@ -11,15 +11,20 @@ export function BasicAeromodellingArticle() {
       </p>
       <br />
       <h2>Type Of Aeromodelling</h2>
-      <a href="#plane-model">Plane Model</a>
-      <p>Glider Model</p>
-      <p>Helicopter Model</p>
-      <p>Quadcopter</p>
-      <p>Hexacopter</p>
+      <ul>
+        <li>
+          <a href="#plane-model">Plane Model</a>
+        </li>
+        <li>
+          <a href="#helicopter-model">Helicopter Model</a>
+        </li>
+        <li>Quadcopter Model</li>
+        <li>Hexacopter Model</li>
+      </ul>
       <br />
-      <h2>Plane Model</h2>
 
       <section id="plane-model">
+        <h2>Plane Model</h2>
         <h3>- Types of Plane Model</h3>
         <p>
           There are several distinct types of plane model, each with its own
@@ -82,7 +87,6 @@ export function BasicAeromodellingArticle() {
             lift, causing the aircraft to rotate.
           </li>
           <br />
-
           <li>
             <strong>Yaw:</strong> Yaw is the rotation of an aircraft around its
             vertical axis (also known as the directional axis). This is the
@@ -92,6 +96,51 @@ export function BasicAeromodellingArticle() {
             control surface located on the tail of the aircraft. It pushes the
             tail in one direction, causing the aircraft to rotate around its
             vertical axis.
+          </li>
+        </ul>
+      </section>
+      <br />
+      <section id="helicopter-model">
+        <h2>Helicopter Model</h2>
+        <h3>- Types of Helicopter</h3>
+        <ul>
+          <li>
+            <strong>Gyro Helicopters (Most Common for Beginners):</strong> The
+            simplest and most popular type. They utilize a single rotor blade
+            for lift and control. Typically feature a main rotor and a tail
+            rotor (though some have a tail fin for stability). Collective pitch
+            control (adjusting the rotor speed) and cyclic control (moving the
+            rotor through a circle) are used to control movement.
+          </li>
+          <li>
+            <strong>Coaxial Helicopters:</strong> These helicopters feature{" "}
+            <em>two</em> rotors stacked on top of each other, rotating in
+            opposite directions. This creates a gyroscopic effect, dramatically
+            increasing maneuverability. Requires precise control due to the
+            complex interaction of the rotors.
+          </li>
+          <li>
+            <strong>Compound Helicopters:</strong> Employ a combination of a
+            main rotor and a tail rotor – mirroring the configuration of
+            full-sized helicopters. A larger main rotor provides lift, while a
+            tail rotor counteracts the torque, maintaining stability. More
+            complex than single-rotor gyros, requiring understanding of torque
+            and stability.
+          </li>
+          <li>
+            <strong>VTOL Helicopters:</strong> Designed to take off and land
+            vertically, similar to real helicopters. There are several
+            approaches: * <strong>Ducted Fan Helicopters:</strong> Utilize
+            ducted fans (fans enclosed in a housing) for increased thrust and
+            safety. * <strong>Rotor-Based VTOL:</strong> Employ multiple rotors
+            or tilting rotors to achieve vertical lift and controlled horizontal
+            movement.
+          </li>
+          <li>
+            <strong>Hybrid Helicopters:</strong> Many modern aeromodelling
+            helicopters incorporate features from different categories. For
+            example, a model might be a gyro with ducted fans for increased
+            thrust.
           </li>
         </ul>
       </section>
