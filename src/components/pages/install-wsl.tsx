@@ -1,8 +1,9 @@
 import "./styles/article.css";
 import { CodeBlock } from "../code-block";
+import { ArticleWrapper } from "./article-wrapper";
 export function InstallWSLArticle() {
   return (
-    <div className="content-wrapper">
+    <ArticleWrapper>
       <h1>Install WSL</h1>
       <p>
         Now developers can access the power of both Windows and Linux at the
@@ -39,6 +40,6 @@ export function InstallWSLArticle() {
         the Ubuntu distribution of Linux. (This default distribution can be
         changed).
       </p>
-    </div>
+    </ArticleWrapper>
   );
 }

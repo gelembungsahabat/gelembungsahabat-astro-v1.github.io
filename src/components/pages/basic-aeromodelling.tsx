@@ -1,7 +1,8 @@
 import "./styles/article.css";
+import { ArticleWrapper } from "./article-wrapper";
 export function BasicAeromodellingArticle() {
   return (
-    <div className="content-wrapper">
+    <ArticleWrapper>
       <h1>Basic Aeromodelling</h1>
       <br />
       <p>
@@ -22,7 +23,6 @@ export function BasicAeromodellingArticle() {
         <li>Hexacopter Model</li>
       </ul>
       <br />
-
       <section id="plane-model">
         <h2>Plane Model</h2>
         <h3>- Types of Plane Model</h3>
@@ -152,6 +152,6 @@ export function BasicAeromodellingArticle() {
           </li>
         </ul>
       </section>
-    </div>
+    </ArticleWrapper>
   );
 }

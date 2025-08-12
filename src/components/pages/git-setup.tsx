@@ -1,8 +1,9 @@
 import "./styles/article.css";
 import { CodeBlock } from "../code-block";
+import { ArticleWrapper } from "./article-wrapper";
 export function GitSetupArticle() {
   return (
-    <div className="content-wrapper">
+    <ArticleWrapper>
       <h1>Git Setup</h1>
       <p>
         Git is the most important things on software development these days.
@@ -29,9 +30,11 @@ export function GitSetupArticle() {
           git config --global user.name 'your name'
         </>
       </CodeBlock>
-      Next, you can create repository on your github / gitlab account, then
-      inside your Project Directory, run this command below (do NOT include
-      these curly branches):
+      <p>
+        Next, you can create repository on your github / gitlab account, then
+        inside your Project Directory, run this command below (do NOT include
+        these curly branches):
+      </p>
       <CodeBlock consoleName="Terminal">
         <>
           cd &#123;your-project-directory&#125; <br />
@@ -43,10 +46,13 @@ export function GitSetupArticle() {
           git push -u origin main
         </>
       </CodeBlock>
-      Make sure you've already set SSH up to your github or gitlab account. I'll
-      make that article soon, so stay tune! :D
+      <p>
+        Make sure you've already set SSH up to your github or gitlab account.
+        You can check this <a href="/ssh-setup">SSH Setup article</a> for the
+        tutorial.
+      </p>
       <h2>That's it</h2>
-      you've already set your local git with your local machine
-    </div>
+      <p>you've already set your local git with your local machine</p>
+    </ArticleWrapper>
   );
 }
