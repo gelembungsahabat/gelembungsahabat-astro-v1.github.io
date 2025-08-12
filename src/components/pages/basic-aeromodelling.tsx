@@ -131,11 +131,18 @@ export function BasicAeromodellingArticle() {
           <li>
             <strong>VTOL Helicopters:</strong> Designed to take off and land
             vertically, similar to real helicopters. There are several
-            approaches: * <strong>Ducted Fan Helicopters:</strong> Utilize
-            ducted fans (fans enclosed in a housing) for increased thrust and
-            safety. * <strong>Rotor-Based VTOL:</strong> Employ multiple rotors
-            or tilting rotors to achieve vertical lift and controlled horizontal
-            movement.
+            approaches:
+            <ul>
+              <li>
+                <strong>Ducted Fan Helicopters:</strong> Utilize ducted fans
+                (fans enclosed in a housing) for increased thrust and safety.
+              </li>
+              <li>
+                <strong>Rotor-Based VTOL:</strong> Employ multiple rotors or
+                tilting rotors to achieve vertical lift and controlled
+                horizontal movement.
+              </li>
+            </ul>
           </li>
           <li>
             <strong>Hybrid Helicopters:</strong> Many modern aeromodelling
