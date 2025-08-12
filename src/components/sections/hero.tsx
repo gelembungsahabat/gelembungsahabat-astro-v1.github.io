@@ -1,4 +1,5 @@
 import "./styles/hero.css";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export function Hero(props: { setCurrentSection: (section: number) => void }) {
   const { setCurrentSection } = props;
@@ -8,6 +9,22 @@ export function Hero(props: { setCurrentSection: (section: number) => void }) {
         <div>
           <h1>Hi, I'm Muhammad Wildan</h1>
           <h2>Welcome to my personal blog!</h2>
+          <div className="icons-div">
+            <a
+              href="https://github.com/gelembungsahabat"
+              target="_blank"
+              className="icon-link"
+            >
+              <FaGithub size={"1.5rem"} />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/gelembungsahabat/"
+              target="_blank"
+              className="icon-link"
+            >
+              <FaLinkedin size={"1.5rem"} />
+            </a>
+          </div>
         </div>
         <div className="card-container">
           <span
