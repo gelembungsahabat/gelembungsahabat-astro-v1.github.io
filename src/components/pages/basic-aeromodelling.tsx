@@ -56,8 +56,9 @@ export function BasicAeromodellingArticle() {
         <br />
         <h3>- Movement</h3>
         <img
-          src="https://howthingsfly.si.edu/sites/default/files/2020-06/pitch-roll-yaw_0.gif"
+          src="/images/pitch-roll-yaw.gif"
           alt="pitch-roll-yaw"
+          className="gif-img"
         />
         <br />
         Gif source:{" "}
