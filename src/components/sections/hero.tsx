@@ -48,6 +48,7 @@ export function Hero(props: { setCurrentSection: (section: number) => void }) {
           <span
             onClick={() => setCurrentSection(3)}
             className="card has-bg-img project-list-img"
+            tabIndex={0}
           >
             <div className="card-title-container">
               <span className="card-title">Fun Articles</span>
