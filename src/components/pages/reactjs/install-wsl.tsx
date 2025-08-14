@@ -1,5 +1,5 @@
-import "./styles/article.css";
-import { CodeBlock } from "../code-block";
+import "../styles/article.css";
+import { CodeBlock } from "../../code-block";
 import { ArticleWrapper } from "./article-wrapper";
 export function InstallWSLArticle() {
   return (

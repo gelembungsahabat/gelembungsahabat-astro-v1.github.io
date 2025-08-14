@@ -1,5 +1,5 @@
 import { type JSX } from "react";
-import "./styles/article.css";
+import "../styles/article.css";
 
 interface ArticleWrapperData {
   children: JSX.Element[];

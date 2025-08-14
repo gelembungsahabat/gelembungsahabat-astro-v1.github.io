@@ -1,4 +1,4 @@
-import "./styles/article.css";
+import "../styles/article.css";
 import { ArticleWrapper } from "./article-wrapper";
 export function EmptyPage() {
   return (
