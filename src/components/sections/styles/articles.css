@@ -19,7 +19,6 @@
 }
 
 .article-card {
-  height: 10rem;
   margin: 0.5rem 2rem;
   background-color: gray;
   border-radius: 1rem;
@@ -28,7 +27,7 @@
 }
 
 .content-wrapper {
-  margin: 2rem;
+  margin: 1rem;
 }
 
 .title {
@@ -45,6 +44,9 @@
     margin: 0 2rem 0 2rem;
     width: 90%;
   }
+  .article-card {
+    max-height: 7rem;
+  }
 }
 
 /* ≥ 1024px: Small Desktops */
@@ -56,6 +58,9 @@
     justify-content: space-between;
     width: 70%;
   }
+  .article-card {
+    max-height: 7rem;
+  }
 }
 
 /* ≥ 1440px: Large Screens */
@@ -64,5 +69,8 @@
   .articles-container {
     justify-content: space-between;
     width: 50%;
+  }
+  .article-card {
+    max-height: 7rem;
   }
 }
