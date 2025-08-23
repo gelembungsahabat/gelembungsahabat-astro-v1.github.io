@@ -2,6 +2,7 @@ import "./App.css";
 import { type WheelEvent, useState, useEffect, useRef } from "react";
 import { SectionBar } from "./section-bar";
 import { AnimeRecommendation, Articles, Hero, HiraganaQuiz } from "./sections";
+import { useDebounce } from "../hooks";
 
 import { usePreventMousewheelZoom } from "../hooks";
 
@@ -13,9 +14,11 @@ function App() {
   const scroll = (e: WheelEvent<Element>) => {
     if (e.deltaY >= 1 && currentSectionIndex < maxSectionIndex) {
       setCurrentSectionIndex((prevState) => prevState + 1);
+      console.log(e.deltaY, "up");
     }
     if (e.deltaY <= 1 && currentSectionIndex >= 1) {
       setCurrentSectionIndex((prevState) => prevState - 1);
+      console.log(e.deltaY, "down");
     }
   };
 
@@ -27,10 +30,10 @@ function App() {
     const endScreenY = e.changedTouches[0].screenY;
     const startScreenY = startScreenYRef.current;
     const touchScreenDiff = startScreenY - endScreenY;
-    if (touchScreenDiff < -200 && currentSectionIndex >= 1) {
+    if (touchScreenDiff < 0 && currentSectionIndex >= 1) {
       setCurrentSectionIndex((prevState) => prevState - 1);
     }
-    if (touchScreenDiff > 200 && currentSectionIndex < maxSectionIndex) {
+    if (touchScreenDiff > 0 && currentSectionIndex < maxSectionIndex) {
       setCurrentSectionIndex((prevState) => prevState + 1);
     }
   };
