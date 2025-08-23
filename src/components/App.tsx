@@ -1,8 +1,8 @@
 import "./App.css";
-import { type WheelEvent, useState, useEffect, useRef } from "react";
+import { type WheelEvent, useState, useEffect, useRef, useMemo } from "react";
 import { SectionBar } from "./section-bar";
 import { AnimeRecommendation, Articles, Hero, HiraganaQuiz } from "./sections";
-import { useDebounce } from "../hooks";
+import _ from "lodash";
 
 import { usePreventMousewheelZoom } from "../hooks";
 
@@ -68,11 +68,12 @@ function App() {
 
   usePreventMousewheelZoom();
 
+  const onWheelThrottled = useMemo(() => _.throttle(scroll, 2000), []);
   return (
     <>
       <div
         className="homepage"
-        onWheel={scroll}
+        onWheel={onWheelThrottled}
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
       >
