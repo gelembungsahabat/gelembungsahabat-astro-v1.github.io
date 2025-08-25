@@ -73,7 +73,7 @@ function App() {
     <>
       <div
         className="homepage"
-        onWheel={onWheelThrottled}
+        onWheel={scroll}
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
       >
