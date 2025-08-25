@@ -1,5 +1,6 @@
 import "./styles/hero.css";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { IoWarningOutline } from "react-icons/io5";
 
 export function Hero(props: { setCurrentSection: (section: number) => void }) {
   const { setCurrentSection } = props;
@@ -24,6 +25,10 @@ export function Hero(props: { setCurrentSection: (section: number) => void }) {
             >
               <FaLinkedin size={"1.5rem"} />
             </a>
+          </div>
+          <div className="warning-container">
+            <IoWarningOutline size={"1.5rem"} style={{ marginTop: "1rem" }} />
+            <p>This Website is under development</p>
           </div>
         </div>
         <div className="card-container">

@@ -2,7 +2,7 @@ import "./App.css";
 import { type WheelEvent, useState, useEffect, useRef, useMemo } from "react";
 import { SectionBar } from "./section-bar";
 import { AnimeRecommendation, Articles, Hero, HiraganaQuiz } from "./sections";
-import _ from "lodash";
+import { throttle } from "lodash";
 
 import { usePreventMousewheelZoom } from "../hooks";
 
@@ -68,7 +68,7 @@ function App() {
 
   usePreventMousewheelZoom();
 
-  const onWheelThrottled = useMemo(() => _.throttle(scroll, 2000), []);
+  const onWheelThrottled = useMemo(() => throttle(scroll, 200), []);
   return (
     <>
       <div
