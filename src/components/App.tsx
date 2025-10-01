@@ -3,7 +3,6 @@ import { type WheelEvent, useState, useEffect, useRef, useMemo } from "react";
 import { SectionBar } from "./section-bar";
 import { AnimeRecommendation, Articles, Hero, HiraganaQuiz } from "./sections";
 import { throttle } from "lodash";
-
 import { usePreventMousewheelZoom } from "../hooks";
 
 function App() {
@@ -11,17 +10,23 @@ function App() {
   const startScreenYRef = useRef(0);
   const maxSectionIndex = 3;
 
+  // Keep latest section index in a ref for scroll handler
+  const sectionIndexRef = useRef(currentSectionIndex);
+  useEffect(() => {
+    sectionIndexRef.current = currentSectionIndex;
+  }, [currentSectionIndex]);
+
+  // Scroll handler with threshold
   const scroll = (e: WheelEvent<Element>) => {
-    if (e.deltaY >= 1 && currentSectionIndex < maxSectionIndex) {
-      setCurrentSectionIndex((prevState) => prevState + 1);
-      console.log(e.deltaY, "up");
-    }
-    if (e.deltaY <= 1 && currentSectionIndex >= 1) {
-      setCurrentSectionIndex((prevState) => prevState - 1);
-      console.log(e.deltaY, "down");
+    const threshold = 30; // sensitivity for trackpad/mouse
+    if (e.deltaY > threshold && sectionIndexRef.current < maxSectionIndex) {
+      setCurrentSectionIndex((prev) => prev + 1);
+    } else if (e.deltaY < -threshold && sectionIndexRef.current > 0) {
+      setCurrentSectionIndex((prev) => prev - 1);
     }
   };
 
+  // Touch handlers for mobile
   const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
     startScreenYRef.current = e.touches[0].screenY;
   };
@@ -30,50 +35,55 @@ function App() {
     const endScreenY = e.changedTouches[0].screenY;
     const startScreenY = startScreenYRef.current;
     const touchScreenDiff = startScreenY - endScreenY;
-    if (touchScreenDiff < 0 && currentSectionIndex >= 1) {
-      setCurrentSectionIndex((prevState) => prevState - 1);
+    const threshold = 50; // touch swipe sensitivity
+    if (touchScreenDiff < -threshold && sectionIndexRef.current > 0) {
+      setCurrentSectionIndex((prev) => prev - 1);
     }
-    if (touchScreenDiff > 0 && currentSectionIndex < maxSectionIndex) {
-      setCurrentSectionIndex((prevState) => prevState + 1);
+    if (
+      touchScreenDiff > threshold &&
+      sectionIndexRef.current < maxSectionIndex
+    ) {
+      setCurrentSectionIndex((prev) => prev + 1);
     }
   };
 
+  // Arrow key navigation + auto scroll into view
   useEffect(() => {
     const sections = document.querySelectorAll("section");
 
-    // Arrow key scrolling
     const onKeyDown = (e: KeyboardEvent) => {
-      if (["ArrowUp"].includes(e.code) && currentSectionIndex >= 1) {
+      if (e.code === "ArrowUp" && sectionIndexRef.current > 0) {
         e.preventDefault();
-        setCurrentSectionIndex((prevState) => prevState - 1);
+        setCurrentSectionIndex((prev) => prev - 1);
       }
-      if (
-        ["ArrowDown"].includes(e.code) &&
-        currentSectionIndex < maxSectionIndex
-      ) {
+      if (e.code === "ArrowDown" && sectionIndexRef.current < maxSectionIndex) {
         e.preventDefault();
-        setCurrentSectionIndex((prevState) => prevState + 1);
+        setCurrentSectionIndex((prev) => prev + 1);
       }
     };
-    window.addEventListener("keydown", onKeyDown, false);
+    window.addEventListener("keydown", onKeyDown);
 
-    // Scroll to section
+    // Smooth scroll to active section
     setTimeout(() => {
-      sections[currentSectionIndex].scrollIntoView({ behavior: "smooth" });
+      sections[currentSectionIndex]?.scrollIntoView({ behavior: "smooth" });
     }, 100);
 
-    // Prevent KeyDown being triggered 2 times
     return () => window.removeEventListener("keydown", onKeyDown);
-  }, [currentSectionIndex, setCurrentSectionIndex]);
+  }, [currentSectionIndex]);
 
   usePreventMousewheelZoom();
 
-  const onWheelThrottled = useMemo(() => throttle(scroll, 200), []);
+  // Stable throttled wheel handler
+  const onWheelThrottled = useMemo(
+    () => throttle(scroll, 800, { trailing: false }),
+    []
+  );
+
   return (
     <>
       <div
         className="homepage"
-        onWheel={scroll}
+        onWheel={onWheelThrottled}
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
       >
