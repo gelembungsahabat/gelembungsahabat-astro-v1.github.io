@@ -26,10 +26,10 @@ export function Hero(props: { setCurrentSection: (section: number) => void }) {
               <FaLinkedin size={"1.5rem"} />
             </a>
           </div>
-          <div className="warning-container">
+          {/* <div className="warning-container">
             <IoWarningOutline size={"1.5rem"} style={{ marginTop: "1rem" }} />
             <p>This Website is under development</p>
-          </div>
+          </div> */}
         </div>
         <div className="card-container">
           <span
