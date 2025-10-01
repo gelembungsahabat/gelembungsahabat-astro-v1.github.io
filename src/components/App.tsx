@@ -18,7 +18,7 @@ function App() {
 
   // Scroll handler with threshold
   const scroll = (e: WheelEvent<Element>) => {
-    const threshold = 30; // sensitivity for trackpad/mouse
+    const threshold = 4; // sensitivity for trackpad/mouse
     if (e.deltaY > threshold && sectionIndexRef.current < maxSectionIndex) {
       setCurrentSectionIndex((prev) => prev + 1);
     } else if (e.deltaY < -threshold && sectionIndexRef.current > 0) {
@@ -75,7 +75,7 @@ function App() {
 
   // Stable throttled wheel handler
   const onWheelThrottled = useMemo(
-    () => throttle(scroll, 800, { trailing: false }),
+    () => throttle(scroll, 500, { trailing: false }),
     []
   );
 
