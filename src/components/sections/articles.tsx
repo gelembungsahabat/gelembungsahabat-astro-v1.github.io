@@ -8,12 +8,7 @@ export function Articles() {
       <div className="articles-container">
         {articleListData.map((val, idx) => {
           return (
-            <a
-              href={val.href}
-              target="_blank"
-              className="article-card"
-              key={idx}
-            >
+            <a href={val.href} className="article-card" key={idx}>
               <div className="content-wrapper">
                 <h1 className="title">{val.title}</h1>
                 <h2 className="subtitle">{val.subtitle}</h2>

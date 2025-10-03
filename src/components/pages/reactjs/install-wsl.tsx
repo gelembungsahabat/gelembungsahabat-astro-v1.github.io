@@ -18,10 +18,7 @@ export function InstallWSLArticle() {
         You must be running Windows 10 version 2004 and higher (Build 19041 and
         higher) or Windows 11 to use the commands below. If you are on earlier
         versions, you can see{" "}
-        <a
-          target="_blank"
-          href="https://learn.microsoft.com/en-us/windows/wsl/install-manual"
-        >
+        <a href="https://learn.microsoft.com/en-us/windows/wsl/install-manual">
           the manual install page.
         </a>
       </p>
