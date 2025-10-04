@@ -55,7 +55,8 @@ export function AnimeRecommendation() {
       </div>
       <div className="anime-recommendation-wrapper">
         <div className="anime-list">
-          <IoIosArrowUp
+          <button
+            className="arrow-button"
             onClick={() =>
               setAnimeListPagination((prev) => {
                 if (prev > 0) {
@@ -65,7 +66,10 @@ export function AnimeRecommendation() {
                 }
               })
             }
-          />
+          >
+            <IoIosArrowUp />
+          </button>
+
           {animeRecommendationData
             .map((anime: AnimeRecommendation, index: number) => {
               return (
@@ -79,7 +83,8 @@ export function AnimeRecommendation() {
               );
             })
             .slice(0 + animeListPagination, 4 + animeListPagination)}
-          <IoIosArrowDown
+          <button
+            className="arrow-button"
             onClick={() =>
               setAnimeListPagination((prev) => {
                 if (prev < 5) {
@@ -89,7 +94,9 @@ export function AnimeRecommendation() {
                 }
               })
             }
-          />
+          >
+            <IoIosArrowDown />
+          </button>
         </div>
         <div
           className="anime-details-wrapper"
