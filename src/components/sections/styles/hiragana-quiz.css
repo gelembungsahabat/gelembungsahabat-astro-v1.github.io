@@ -7,17 +7,17 @@
 }
 
 .hiragana-quiz-container {
-  height: 85vh;
+  height: auto;
   background-color: #424549;
   display: flex;
   flex-flow: row wrap;
   border-radius: 20px;
-  overflow: auto;
-  overflow-x: hidden;
+  overflow: hidden;
   gap: 1rem;
   align-items: center;
   justify-content: center;
-  width: 90%;
+  width: 60%;
+  padding: 2rem 0;
 }
 
 .hiragana-container {

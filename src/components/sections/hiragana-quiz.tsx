@@ -9,7 +9,8 @@ function getRandomObjectEntries(obj: object, n: number) {
   return Object.fromEntries(selected);
 }
 
-const randomSubset = getRandomObjectEntries(hiraganaData, 15);
+const numberOfHiragana = 10;
+const randomSubset = getRandomObjectEntries(hiraganaData, numberOfHiragana);
 
 export function HiraganaQuiz() {
   const [myStyle, setMyStyle] = useState<{ [key: number]: boolean }>({});
