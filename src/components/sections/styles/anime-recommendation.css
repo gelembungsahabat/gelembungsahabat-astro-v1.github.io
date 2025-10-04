@@ -21,29 +21,8 @@
 .anime-list {
   margin: 2% 2rem;
   flex-direction: column;
-  overflow-y: scroll;
-  overflow-x: hidden;
+  overflow: hidden;
   align-items: center;
-}
-
-.anime-list::-webkit-scrollbar {
-  width: 0.5rem;
-}
-/* Track */
-.anime-list::-webkit-scrollbar-track {
-  background-color: rgba(128, 128, 128, 0.372);
-  border-radius: 10px;
-}
-
-/* Handle */
-.anime-list::-webkit-scrollbar-thumb {
-  background: gray;
-  border-radius: 10px;
-}
-
-/* Handle on hover */
-.anime-list::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.426);
 }
 
 .anime-list-item {
@@ -67,7 +46,7 @@
 
 .anime-list-item,
 .anime-list-item-active {
-  margin: 1rem 3rem;
+  margin: auto 2rem;
   width: 15rem;
   min-height: 5rem;
   line-height: 1;

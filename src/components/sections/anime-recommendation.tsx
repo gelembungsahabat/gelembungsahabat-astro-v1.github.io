@@ -6,6 +6,7 @@ import {
   MdOutlineArrowBackIos,
   MdOutlineArrowForwardIos,
 } from "react-icons/md";
+import { IoIosArrowUp, IoIosArrowDown } from "react-icons/io";
 
 const AnimeRecommendationItem = (props: {
   index: number;
@@ -30,6 +31,7 @@ const AnimeRecommendationItem = (props: {
 
 export function AnimeRecommendation() {
   const [selectedAnimeIndex, setSelectedAnimeIndex] = useState(0);
+  const [animeListPagination, setAnimeListPagination] = useState(0);
 
   // prevent scrolling on anime-list
   usePreventScrolling("anime-list");
@@ -53,8 +55,19 @@ export function AnimeRecommendation() {
       </div>
       <div className="anime-recommendation-wrapper">
         <div className="anime-list">
-          {animeRecommendationData.map(
-            (anime: AnimeRecommendation, index: number) => {
+          <IoIosArrowUp
+            onClick={() =>
+              setAnimeListPagination((prev) => {
+                if (prev > 0) {
+                  return prev - 1;
+                } else {
+                  return prev;
+                }
+              })
+            }
+          />
+          {animeRecommendationData
+            .map((anime: AnimeRecommendation, index: number) => {
               return (
                 <AnimeRecommendationItem
                   key={index}
@@ -64,8 +77,19 @@ export function AnimeRecommendation() {
                   animeName={anime.name}
                 />
               );
+            })
+            .slice(0 + animeListPagination, 4 + animeListPagination)}
+          <IoIosArrowDown
+            onClick={() =>
+              setAnimeListPagination((prev) => {
+                if (prev < 5) {
+                  return prev + 1;
+                } else {
+                  return prev;
+                }
+              })
             }
-          )}
+          />
         </div>
         <div
           className="anime-details-wrapper"
