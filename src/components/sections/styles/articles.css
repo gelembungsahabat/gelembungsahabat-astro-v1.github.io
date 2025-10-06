@@ -20,7 +20,7 @@
 
 .article-card {
   margin: 0.5rem 2rem;
-  background-color: gray;
+  background-color: rgba(110, 113, 116, 0.2);
   border-radius: 1rem;
   width: 100%;
   color: white;
