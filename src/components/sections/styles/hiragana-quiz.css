@@ -8,7 +8,10 @@
 
 .hiragana-quiz-container {
   height: auto;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
   background-color: rgba(66, 69, 73, 0.2);
+  border-radius: 20px;
   display: flex;
   flex-flow: row wrap;
   border-radius: 20px;
