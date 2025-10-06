@@ -66,6 +66,7 @@ export function AnimeRecommendation() {
                 }
               })
             }
+            disabled={animeListPagination === 0}
           >
             <IoIosArrowUp />
           </button>
@@ -94,6 +95,7 @@ export function AnimeRecommendation() {
                 }
               })
             }
+            disabled={animeListPagination === 5}
           >
             <IoIosArrowDown />
           </button>
