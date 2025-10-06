@@ -4,6 +4,7 @@ Stack that I use:
 
 - Astro with ReactJS (for ez routing and SEO)
 - ReactJS with Typescript
+- Background from https://patterncraft.fun/
 
 To learn more about the folder structure of an Astro project, refer to [Astro's guide on project structure](https://docs.astro.build/en/basics/project-structure/).
 
