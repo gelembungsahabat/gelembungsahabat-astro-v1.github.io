@@ -56,7 +56,7 @@ export function AnimeRecommendation() {
       <div className="anime-recommendation-wrapper">
         <div className="anime-list">
           <button
-            className="arrow-button"
+            className="transparent-button"
             onClick={() =>
               setAnimeListPagination((prev) => {
                 if (prev > 0) {
@@ -85,7 +85,7 @@ export function AnimeRecommendation() {
             })
             .slice(0 + animeListPagination, 4 + animeListPagination)}
           <button
-            className="arrow-button"
+            className="transparent-button"
             onClick={() =>
               setAnimeListPagination((prev) => {
                 if (prev < 5) {
@@ -121,12 +121,14 @@ export function AnimeRecommendation() {
             <button
               className="arrow-button"
               onClick={() => CarouselOnClick("previous")}
+              disabled={selectedAnimeIndex === 0}
             >
               <MdOutlineArrowBackIos />
             </button>
             <button
               className="arrow-button"
               onClick={() => CarouselOnClick("next")}
+              disabled={selectedAnimeIndex === 8}
             >
               <MdOutlineArrowForwardIos />
             </button>
