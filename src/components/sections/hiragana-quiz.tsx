@@ -40,6 +40,7 @@ export function HiraganaQuiz() {
             <p className="hiragana">{key}</p>
             <input
               type="text"
+              aria-label={key}
               onBlur={(e: ChangeEvent<HTMLInputElement>) => {
                 const inputValue = e.target.value.toLowerCase();
                 if (inputValue !== answer && myStyle[`${index}`] !== true) {
