@@ -17,8 +17,7 @@
 }
 
 .hero-title {
-  width: 60%;
-  margin-right: 6rem;
+  margin: 2rem 0;
 }
 
 .icons-div {
@@ -34,6 +33,9 @@
 
 /* ≥ 320px: mobile size */
 @media (min-width: 320px) {
+  .hero-title {
+    width: 100%;
+  }
   .hero-page-container {
     margin: 0 2rem 0 2rem;
     top: 40%;
@@ -43,6 +45,10 @@
 /* ≥ 1024px: Small Desktops */
 @media (min-width: 1024px) {
   /* Desktop styles */
+  .hero-title {
+    width: 60%;
+    margin-right: 6rem;
+  }
   .hero-page-container {
     display: flex;
     flex-direction: row;
