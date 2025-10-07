@@ -11,12 +11,17 @@ export function Hero(props: { setCurrentSection: (section: number) => void }) {
           <h1>Hi, I'm Muhammad Wildan</h1>
           <h2>Welcome to my personal blog!</h2>
           <div className="icons-div">
-            <a href="https://github.com/gelembungsahabat" className="icon-link">
+            <a
+              href="https://github.com/gelembungsahabat"
+              className="icon-link"
+              aria-label="Github Wildan"
+            >
               <FaGithub size={"1.5rem"} />
             </a>
             <a
               href="https://www.linkedin.com/in/gelembungsahabat/"
               className="icon-link"
+              aria-label="LinkedIn Wildan"
             >
               <FaLinkedin size={"1.5rem"} />
             </a>
