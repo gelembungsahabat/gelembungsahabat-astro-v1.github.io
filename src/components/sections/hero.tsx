@@ -7,9 +7,12 @@ export function Hero(props: { setCurrentSection: (section: number) => void }) {
   return (
     <section className="hero">
       <div className="hero-page-container">
-        <div>
+        <div className="hero-title">
           <h1>Hi, I'm Muhammad Wildan</h1>
-          <h2>Welcome to my personal blog!</h2>
+          <h2>
+            Software Engineer focused on Front-End Engineering and Robotics —
+            building fast, scalable, and reliable systems.
+          </h2>
           <div className="icons-div">
             <a
               href="https://github.com/gelembungsahabat"

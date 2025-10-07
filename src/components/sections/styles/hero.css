@@ -16,6 +16,11 @@
   transform: translateY(-45%);
 }
 
+.hero-title {
+  width: 60%;
+  margin-right: 6rem;
+}
+
 .icons-div {
   display: flex;
   flex-direction: row;
