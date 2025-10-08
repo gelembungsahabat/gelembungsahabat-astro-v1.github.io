@@ -1,17 +1,22 @@
 import "./styles/hero.css";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { IoWarningOutline } from "react-icons/io5";
+import { motion } from "motion/react";
 
-export function Hero(props: { setCurrentSection: (section: number) => void }) {
-  const { setCurrentSection } = props;
+export function Hero() {
   return (
     <section className="hero">
       <div className="hero-page-container">
-        <div className="hero-title">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="hero-title"
+        >
           <h1>Hi, I'm Muhammad Wildan</h1>
           <h2>
-            Software Engineer focused on Front-End Engineering and Robotics —
-            building fast, scalable, and reliable systems.
+            Software Engineer specializing in Front-End and Robotics — building
+            fast, scalable, and reliable experiences.
           </h2>
           <div className="icons-div">
             <a
@@ -29,40 +34,7 @@ export function Hero(props: { setCurrentSection: (section: number) => void }) {
               <FaLinkedin size={"1.5rem"} />
             </a>
           </div>
-          {/* <div className="warning-container">
-            <IoWarningOutline size={"1.5rem"} style={{ marginTop: "1rem" }} />
-            <p>This Website is under development</p>
-          </div> */}
-        </div>
-        <div className="card-container">
-          <span
-            className="card has-bg-img anime-recommendation-img"
-            onClick={() => setCurrentSection(1)}
-            tabIndex={0}
-          >
-            <div className="card-title-container">
-              <span className="card-title">Anime Recommendation</span>
-            </div>
-          </span>
-          <span
-            className="card has-bg-img fun-things-img"
-            onClick={() => setCurrentSection(2)}
-            tabIndex={0}
-          >
-            <div className="card-title-container">
-              <span className="card-title">Hiragana Quiz</span>
-            </div>
-          </span>
-          <span
-            onClick={() => setCurrentSection(3)}
-            className="card has-bg-img project-list-img"
-            tabIndex={0}
-          >
-            <div className="card-title-container">
-              <span className="card-title">Fun Articles</span>
-            </div>
-          </span>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

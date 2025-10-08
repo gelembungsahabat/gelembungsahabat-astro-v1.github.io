@@ -87,7 +87,7 @@ function App() {
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
       >
-        <Hero setCurrentSection={setCurrentSectionIndex} />
+        <Hero />
         <AnimeRecommendation />
         <HiraganaQuiz />
         <Articles />
