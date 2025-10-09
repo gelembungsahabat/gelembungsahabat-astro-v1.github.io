@@ -19,30 +19,18 @@ const Bar = (props: {
 export const SectionBar = (props: {
   currentSection: number;
   setCurrentSection: (section: number) => void;
+  maxSectionIndex: number;
 }) => {
-  const { currentSection, setCurrentSection } = props;
-  return (
-    <div className="section-bar-wrapper">
+  const { currentSection, setCurrentSection, maxSectionIndex } = props;
+  const barElements = [];
+  for (let i = 0; i < maxSectionIndex + 1; i++) {
+    barElements.push(
       <Bar
-        section={0}
+        section={i}
         currentSection={currentSection}
         setCurrentSection={setCurrentSection}
       />
-      <Bar
-        section={1}
-        currentSection={currentSection}
-        setCurrentSection={setCurrentSection}
-      />
-      <Bar
-        section={2}
-        currentSection={currentSection}
-        setCurrentSection={setCurrentSection}
-      />
-      <Bar
-        section={3}
-        currentSection={currentSection}
-        setCurrentSection={setCurrentSection}
-      />
-    </div>
-  );
+    );
+  }
+  return <div className="section-bar-wrapper">{barElements}</div>;
 };

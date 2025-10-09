@@ -1,7 +1,7 @@
 import "./App.css";
 import { type WheelEvent, useState, useEffect, useRef, useMemo } from "react";
 import { SectionBar } from "./section-bar";
-import { AnimeRecommendation, Articles, Hero, HiraganaQuiz } from "./sections";
+import { Articles, Hero } from "./sections";
 import { throttle } from "lodash";
 import { usePreventMousewheelZoom } from "../hooks";
 import { About } from "./sections/about";
@@ -9,7 +9,7 @@ import { About } from "./sections/about";
 function App() {
   const [currentSectionIndex, setCurrentSectionIndex] = useState(0);
   const startScreenYRef = useRef(0);
-  const maxSectionIndex = 3;
+  const maxSectionIndex = 2;
 
   // Keep latest section index in a ref for scroll handler
   const sectionIndexRef = useRef(currentSectionIndex);
@@ -90,12 +90,12 @@ function App() {
       >
         <Hero />
         <About />
-        <AnimeRecommendation />
         <Articles />
       </div>
       <SectionBar
         currentSection={currentSectionIndex}
         setCurrentSection={setCurrentSectionIndex}
+        maxSectionIndex={maxSectionIndex}
       />
     </>
   );
