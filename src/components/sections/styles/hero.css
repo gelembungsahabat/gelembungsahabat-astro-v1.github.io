@@ -25,5 +25,9 @@
 }
 
 .icon-link {
+  color: gray;
+}
+
+.icon-link:hover {
   color: white;
 }
