@@ -1,15 +1,37 @@
 import "./App.css";
-import { type WheelEvent, useState, useEffect, useRef, useMemo } from "react";
+import React, {
+  type WheelEvent,
+  useState,
+  useEffect,
+  useRef,
+  useMemo,
+  useCallback,
+} from "react";
 import { SectionBar } from "./section-bar";
 import { Articles, Hero } from "./sections";
 import { throttle } from "lodash";
 import { usePreventMousewheelZoom } from "../hooks";
 import { About } from "./sections/about";
 
+interface Position {
+  x: number;
+  y: number;
+}
+
 function App() {
   const [currentSectionIndex, setCurrentSectionIndex] = useState(0);
+  const [position, setPosition] = useState<Position>({ x: 50, y: 50 });
+
   const startScreenYRef = useRef(0);
   const maxSectionIndex = 2;
+
+  // for mouse hovering effect on background
+  const handleMouseMove = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
+    const { innerWidth, innerHeight } = window;
+    const x = (e.clientX / innerWidth) * 100;
+    const y = (e.clientY / innerHeight) * 100;
+    setPosition({ x, y });
+  }, []);
 
   // Keep latest section index in a ref for scroll handler
   const sectionIndexRef = useRef(currentSectionIndex);
@@ -87,6 +109,13 @@ function App() {
         onWheel={onWheelThrottled}
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
+        onMouseMove={handleMouseMove}
+        style={{
+          background: `radial-gradient(
+            circle at ${position.x}% ${position.y}%,
+           rgba(100, 100, 255, 0.3), 
+           rgba(10, 10, 30, 0.9)`,
+        }}
       >
         <Hero />
         <About />

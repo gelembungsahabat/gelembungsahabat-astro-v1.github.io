@@ -85,6 +85,7 @@
   -ms-overflow-style: none; /* Internet Explorer 10+ */
   scrollbar-width: none; /* Firefox */
   touch-action: none;
+  color: white;
 }
 
 .icon {
