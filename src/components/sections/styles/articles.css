@@ -94,5 +94,9 @@
 }
 
 ::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+::-webkit-scrollbar-thumb:active {
   background: rgba(255, 255, 255, 0.7);
 }
