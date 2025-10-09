@@ -14,13 +14,33 @@ export function About() {
       </div>
       <div className="about-container">
         <h1>Experience</h1>
-        <ul>
-          <li>Product Engineer Zero One Group | Apr 2021 - Mar 2025</li>
+        <ul className="experience-list">
           <li>
-            Front-End Developer Aegis E-Sport Academy | Jan 2021 - Apr 2021
+            <span className="date">Apr 2021 – Mar 2025</span>
+            <span className="role">
+              Product Engineer — <span className="company">Zero One Group</span>
+            </span>
           </li>
-          <li>Web Developer Nanas Media | Nov 2020 - Dec 2020</li>
-          <li>Internship Aegis E-Sport Academy | Dec 2019 - Mar 2020</li>
+          <li>
+            <span className="date">Jan 2021 – Apr 2021</span>
+            <span className="role">
+              Front-End Developer —{" "}
+              <span className="company">Aegis E-Sport Academy</span>
+            </span>
+          </li>
+          <li>
+            <span className="date">Nov 2020 – Dec 2020</span>
+            <span className="role">
+              Web Developer — <span className="company">Nanas Media</span>
+            </span>
+          </li>
+          <li>
+            <span className="date">Dec 2019 – Mar 2020</span>
+            <span className="role">
+              Internship —{" "}
+              <span className="company">Aegis E-Sport Academy</span>
+            </span>
+          </li>
         </ul>
       </div>
     </section>
