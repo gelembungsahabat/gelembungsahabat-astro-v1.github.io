@@ -1,5 +1,5 @@
 import "./styles/hero.css";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { IoWarningOutline } from "react-icons/io5";
 import { motion } from "motion/react";
 
@@ -32,6 +32,13 @@ export function Hero() {
               aria-label="LinkedIn Wildan"
             >
               <FaLinkedin size={"1.5rem"} />
+            </a>
+            <a
+              href="https://www.instagram.com/gelembungsahabat_"
+              className="icon-link"
+              aria-label="Instagram Wildan"
+            >
+              <FaInstagram size={"1.5rem"} />
             </a>
           </div>
         </motion.div>

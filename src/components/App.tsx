@@ -4,6 +4,7 @@ import { SectionBar } from "./section-bar";
 import { AnimeRecommendation, Articles, Hero, HiraganaQuiz } from "./sections";
 import { throttle } from "lodash";
 import { usePreventMousewheelZoom } from "../hooks";
+import { About } from "./sections/about";
 
 function App() {
   const [currentSectionIndex, setCurrentSectionIndex] = useState(0);
@@ -88,8 +89,8 @@ function App() {
         onTouchEnd={handleTouchEnd}
       >
         <Hero />
+        <About />
         <AnimeRecommendation />
-        <HiraganaQuiz />
         <Articles />
       </div>
       <SectionBar
