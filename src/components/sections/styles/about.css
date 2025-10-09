@@ -19,7 +19,7 @@
 
 .experience-list li {
   display: grid;
-  grid-template-columns: 150px 1fr;
+  grid-template-columns: 300px 1fr;
   align-items: start;
   gap: 1.2rem;
   padding: 0.8rem 0;
@@ -37,11 +37,15 @@
   font-size: 0.9rem;
   white-space: nowrap;
   font-weight: 400;
+  margin-left: 1rem;
+  justify-content: center;
+  align-items: center;
 }
 
 .role {
   font-weight: 500;
   font-size: 1rem;
+  margin-left: 1rem;
   color: #fff;
   line-height: 1.4;
 }
