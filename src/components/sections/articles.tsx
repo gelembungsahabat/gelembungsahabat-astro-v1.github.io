@@ -13,6 +13,7 @@ export function Articles() {
       <div className="articles-container">
         <button
           className="transparent-button"
+          style={{ display: "block", margin: "auto" }}
           disabled={pagination === 0}
           onClick={() =>
             setPagination((prev) => {
@@ -45,6 +46,7 @@ export function Articles() {
           .slice(0 + pagination, 4 + pagination)}
         <button
           className="transparent-button"
+          style={{ display: "block", margin: "auto" }}
           disabled={pagination === 4}
           onClick={() =>
             setPagination((prev) => {
