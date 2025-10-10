@@ -7,14 +7,14 @@
 }
 
 .articles-container {
-  height: 70vh;
+  max-height: 70vh;
   display: flex;
   flex-flow: row wrap;
   overflow: hidden;
+  width: 60%;
 }
 
 .article-card {
-  padding: 0.5rem 2rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   transition: background 0.3s ease, transform 0.3s ease;
   width: 100%;
@@ -40,42 +40,6 @@
   font-size: clamp(0.5rem, 2.5vw, 0.8rem);
 }
 
-/* ≥ 320px: mobile size */
-@media (min-width: 320px) {
-  .articles-container {
-    margin: 0 2rem 0 2rem;
-    width: 90%;
-  }
-  .article-card {
-    max-height: 7rem;
-  }
-}
-
-/* ≥ 1024px: Small Desktops */
-@media (min-width: 1024px) {
-  /* Desktop styles */
-  .articles-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 70%;
-  }
-  .article-card {
-    max-height: 7rem;
-  }
-}
-
-/* ≥ 1440px: Large Screens */
-@media (min-width: 1440px) {
-  /* Widescreen styles */
-  .articles-container {
-    justify-content: space-between;
-    width: 50%;
-  }
-  .article-card {
-    max-height: 7rem;
-  }
-}
 ::-webkit-scrollbar {
   width: 10px;
 }

@@ -8,8 +8,7 @@ export function Articles() {
   const [pagination, setPagination] = useState(0);
   return (
     <section className="articles">
-      <h1>Fun Articles* </h1>
-      <h2>[Still on Progress]</h2>
+      <h1>Fun Articles* [still WIP]</h1>
       <div className="articles-container">
         <button
           className="transparent-button"
