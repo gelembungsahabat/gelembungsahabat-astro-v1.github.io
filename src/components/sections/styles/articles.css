@@ -24,7 +24,6 @@
 .article-card:hover {
   background: rgba(66, 69, 73, 0.2);
   backdrop-filter: blur(16px) saturate(180%);
-  -webkit-backdrop-filter: blur(16px) saturate(180%);
   transform: translateX(4px);
 }
 
@@ -52,7 +51,6 @@
 ::-webkit-scrollbar-thumb {
   background: rgba(66, 69, 73);
   backdrop-filter: blur(16px) saturate(180%);
-  -webkit-backdrop-filter: blur(16px) saturate(180%);
   border-radius: 10px;
 }
 
