@@ -10,8 +10,7 @@
   height: 70vh;
   display: flex;
   flex-flow: row wrap;
-  overflow-x: hidden;
-  overflow-y: auto;
+  overflow: hidden;
 }
 
 .article-card {
@@ -34,11 +33,11 @@
 }
 
 .title {
-  font-size: clamp(0.7rem, 2.5vw, 1.3rem);
+  font-size: clamp(0.7rem, 2.5vw, 1rem);
 }
 
 .subtitle {
-  font-size: clamp(0.5rem, 2.5vw, 1rem);
+  font-size: clamp(0.5rem, 2.5vw, 0.8rem);
 }
 
 /* ≥ 320px: mobile size */
