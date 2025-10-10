@@ -114,7 +114,7 @@ function App() {
           background: `radial-gradient(
             circle at ${position.x}% ${position.y}%,
            rgba(100, 100, 255, 0.3), 
-           rgba(10, 10, 30, 0.9)`,
+           rgba(10, 10, 30, 0.9))`,
         }}
       >
         <Hero />
