@@ -11,6 +11,7 @@ export function Articles() {
       <h1>Fun Articles* [still WIP]</h1>
       <div className="articles-container">
         <button
+          aria-label="Previous article"
           className="transparent-button"
           style={{ display: "block", margin: "auto" }}
           disabled={pagination === 0}
@@ -44,6 +45,7 @@ export function Articles() {
           })
           .slice(0 + pagination, 4 + pagination)}
         <button
+          aria-label="Next article"
           className="transparent-button"
           style={{ display: "block", margin: "auto" }}
           disabled={pagination === 4}
