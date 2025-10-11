@@ -14,15 +14,6 @@
   transition: background-color 0.3s ease;
 }
 
-.section-bar:hover {
-  height: 4rem;
-  width: 0.5rem;
-  background-color: rgba(255, 255, 255, 0.5);
-  margin: 1rem;
-  border-radius: 10px;
-  cursor: pointer;
-}
-
 .section-bar-active {
   height: 4rem;
   width: 0.5rem;
