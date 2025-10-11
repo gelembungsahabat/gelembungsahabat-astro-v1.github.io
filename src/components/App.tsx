@@ -116,7 +116,6 @@ function App() {
           rgba(100,100,255,0.3), 
           rgba(10,10,30,0.9)),
             linear-gradient(180deg, #0a0a1e, #0a0a1e)`,
-          backgroundColor: "#0a0a1e",
         }}
       >
         <Hero />

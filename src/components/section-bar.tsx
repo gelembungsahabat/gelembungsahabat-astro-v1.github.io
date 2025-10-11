@@ -26,6 +26,7 @@ export const SectionBar = (props: {
   for (let i = 0; i < maxSectionIndex + 1; i++) {
     barElements.push(
       <Bar
+        key={i}
         section={i}
         currentSection={currentSection}
         setCurrentSection={setCurrentSection}
