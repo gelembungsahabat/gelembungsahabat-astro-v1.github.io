@@ -1,18 +1,19 @@
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Grid, Text } from "@react-three/drei";
 import { FullBody } from "../minecraft-model";
+import "./styles/three-js.css";
 
 export function ThreeJS() {
   return (
-    <section>
+    <section className="threejs">
       <Canvas
         camera={{ position: [3, 3, 3] }}
         style={{
-          width: "100vw",
-          height: "100vh",
+          width: "60vw",
+          height: "50vh",
           background: `radial-gradient(
-            circle at 50% 50%, 
-          rgba(100,100,255,0.3), 
+            circle at 50% 50%,
+          rgba(100,100,255,0.3),
           rgba(10,10,30,0.9)),
             linear-gradient(180deg, #0a0a1e, #0a0a1e)`,
         }}
