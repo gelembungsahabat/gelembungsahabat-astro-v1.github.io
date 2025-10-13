@@ -63,3 +63,14 @@ export function RightLeg() {
     </>
   );
 }
+
+export function FullBody() {
+  return (
+    <>
+      <Head />
+      <Body />
+      <LeftHand />
+      <RightHand />
+    </>
+  );
+}

@@ -1,6 +1,6 @@
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Grid, Text } from "@react-three/drei";
-import { Head, Body, LeftHand, RightHand } from "../minecraft-model";
+import { FullBody } from "../minecraft-model";
 
 export function ThreeJS() {
   return (
@@ -19,10 +19,7 @@ export function ThreeJS() {
       >
         <ambientLight intensity={1} />
         <pointLight position={[10, 10, 10]} />
-        <Head />
-        <Body />
-        <LeftHand />
-        <RightHand />
+        <FullBody />
         <Text
           position={[0, 2.3, 0]} // above the cube
           fontSize={0.3}
