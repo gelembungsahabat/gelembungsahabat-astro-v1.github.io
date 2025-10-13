@@ -8,10 +8,9 @@ import React, {
   useCallback,
 } from "react";
 import { SectionBar } from "./section-bar";
-import { Articles, Hero } from "./sections";
+import { Articles, Hero, ThreeJS, About } from "./sections";
 import { throttle } from "lodash";
 import { usePreventMousewheelZoom } from "../hooks";
-import { About } from "./sections/about";
 
 interface Position {
   x: number;
@@ -23,7 +22,7 @@ function App() {
   const [position, setPosition] = useState<Position>({ x: 50, y: 50 });
 
   const startScreenYRef = useRef(0);
-  const maxSectionIndex = 2;
+  const maxSectionIndex = 3;
 
   // for mouse hovering effect on background
   const handleMouseMove = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
@@ -120,6 +119,7 @@ function App() {
       >
         <Hero />
         <About />
+        <ThreeJS />
         <Articles />
       </div>
       <SectionBar
