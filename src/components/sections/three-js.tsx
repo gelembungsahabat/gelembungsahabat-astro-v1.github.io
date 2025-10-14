@@ -6,11 +6,7 @@ export function ThreeJS() {
     <section
       style={{
         height: "100vh",
-        background: `radial-gradient(
-            circle at 50% 50%, 
-          rgba(100,100,255,0.3), 
-          rgba(10,10,30,0.9)),
-            linear-gradient(180deg, #0a0a1e, #0a0a1e)`,
+        background: `transparent`,
       }}
     >
       <Canvas camera={{ position: [0, 0, 6], fov: 60 }}>
