@@ -1,0 +1,19 @@
+.tech-stack {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.tech-stack-grid {
+  display: grid;
+  grid-template-columns: 20vw 20vw;
+}
+
+.tech-stack-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

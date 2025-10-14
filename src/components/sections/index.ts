@@ -4,3 +4,4 @@ export * from "./hero";
 export * from "./hiragana-quiz";
 export * from "./three-js";
 export * from "./about";
+export * from "./tech-stack";

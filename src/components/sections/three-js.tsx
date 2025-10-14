@@ -1,56 +1,57 @@
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls, Grid, Text } from "@react-three/drei";
-import { FullBody } from "../minecraft-model";
-import "./styles/three-js.css";
+import { OrbitControls, Float, Text3D, Environment } from "@react-three/drei";
 
 export function ThreeJS() {
   return (
-    <section className="threejs">
-      <Canvas
-        camera={{ position: [3, 3, 3] }}
-        style={{
-          width: "60vw",
-          height: "50vh",
-          background: `radial-gradient(
-            circle at 50% 50%,
-          rgba(100,100,255,0.3),
+    <section
+      style={{
+        height: "100vh",
+        background: `radial-gradient(
+            circle at 50% 50%, 
+          rgba(100,100,255,0.3), 
           rgba(10,10,30,0.9)),
             linear-gradient(180deg, #0a0a1e, #0a0a1e)`,
-        }}
-      >
-        <ambientLight intensity={1} />
-        <pointLight position={[10, 10, 10]} />
-        <FullBody />
-        <Text
-          position={[0, 2.3, 0]} // above the cube
-          fontSize={0.3}
-          color="#ffffff"
-          anchorX="center"
-          anchorY="middle"
-        >
-          I'm learning 3D Modelling
-        </Text>
-        <Text
-          position={[0, 2, 0]} // above the cube
-          fontSize={0.3}
-          color="#ffffff"
-          anchorX="center"
-          anchorY="middle"
-        >
-          with Three.JS
-        </Text>
-        <Grid
-          args={[20, 20]} // size of the grid
-          cellSize={1}
-          cellThickness={0.5}
-          sectionThickness={1}
-          sectionColor="#444"
-          cellColor="#999"
-          fadeDistance={30}
-          fadeStrength={1}
-          infiniteGrid={true}
-        />
-        <OrbitControls />
+      }}
+    >
+      <Canvas camera={{ position: [0, 0, 6], fov: 60 }}>
+        <ambientLight intensity={0.5} />
+        <Environment preset="studio" />
+        <OrbitControls enableZoom={false} />
+        <Float speed={2} rotationIntensity={1}>
+          <Text3D
+            font="src/assets/helvetiker_regular.typeface.json"
+            size={0.3}
+            height={0.1}
+            bevelEnabled
+            bevelSize={0.02}
+            position={[-1, 1, 0]}
+          >
+            React
+            <meshStandardMaterial color="#61dafb" />
+          </Text3D>
+          <Text3D
+            font="src/assets/helvetiker_regular.typeface.json"
+            size={0.3}
+            height={0.1}
+            bevelEnabled
+            bevelSize={0.02}
+            position={[-1, 0, 0]}
+          >
+            TypeScript
+            <meshStandardMaterial color="#3178c6" />
+          </Text3D>
+          <Text3D
+            font="src/assets/helvetiker_regular.typeface.json"
+            size={0.3}
+            height={0.1}
+            bevelEnabled
+            bevelSize={0.02}
+            position={[-1, -1, 0]}
+          >
+            ThreeJS
+            <meshStandardMaterial color="#ffffff" />
+          </Text3D>
+        </Float>
       </Canvas>
     </section>
   );
