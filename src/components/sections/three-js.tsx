@@ -6,7 +6,7 @@ export function ThreeJS() {
     <section
       style={{
         height: "100vh",
-        background: `transparent`,
+        background: "transparent",
       }}
     >
       <Canvas camera={{ position: [0, 0, 6], fov: 60 }}>
@@ -15,7 +15,7 @@ export function ThreeJS() {
         <OrbitControls enableZoom={false} />
         <Float speed={2} rotationIntensity={1}>
           <Text3D
-            font="src/assets/helvetiker_regular.typeface.json"
+            font="/helvetiker_regular.typeface.json"
             size={0.3}
             height={0.1}
             bevelEnabled
@@ -26,7 +26,7 @@ export function ThreeJS() {
             <meshStandardMaterial color="#61dafb" />
           </Text3D>
           <Text3D
-            font="src/assets/helvetiker_regular.typeface.json"
+            font="/helvetiker_regular.typeface.json"
             size={0.3}
             height={0.1}
             bevelEnabled
@@ -37,7 +37,7 @@ export function ThreeJS() {
             <meshStandardMaterial color="#3178c6" />
           </Text3D>
           <Text3D
-            font="src/assets/helvetiker_regular.typeface.json"
+            font="/helvetiker_regular.typeface.json"
             size={0.3}
             height={0.1}
             bevelEnabled
