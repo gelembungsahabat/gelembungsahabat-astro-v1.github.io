@@ -40,7 +40,8 @@ function App() {
 
   // Scroll handler with threshold
   const scroll = (e: WheelEvent<Element>) => {
-    const threshold = 4; // sensitivity for trackpad/mouse
+    const threshold = 20; // sensitivity for trackpad/mouse
+    console.log(e.deltaY, "deltaY");
     if (e.deltaY > threshold && sectionIndexRef.current < maxSectionIndex) {
       setCurrentSectionIndex((prev) => prev + 1);
     } else if (e.deltaY < -threshold && sectionIndexRef.current > 0) {
@@ -58,6 +59,7 @@ function App() {
     const startScreenY = startScreenYRef.current;
     const touchScreenDiff = startScreenY - endScreenY;
     const threshold = 50; // touch swipe sensitivity
+    console.log(touchScreenDiff, "touchScreenDiff");
     if (touchScreenDiff < -threshold && sectionIndexRef.current > 0) {
       setCurrentSectionIndex((prev) => prev - 1);
     }
