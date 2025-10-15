@@ -39,7 +39,7 @@
   background-color: rgba(255, 192, 203, 0.266);
 }
 
-.anime-list-item-active {
+.anime-list-item--active {
   background-color: rgba(255, 192, 203, 0.566);
   padding: 1.5rem;
   display: flex;
@@ -48,7 +48,7 @@
 }
 
 .anime-list-item,
-.anime-list-item-active {
+.anime-list-item--active {
   margin: auto 2rem;
   width: 15rem;
   min-height: 5rem;

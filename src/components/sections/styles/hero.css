@@ -7,15 +7,15 @@
   -webkit-align-items: center;
 }
 
-.hero-page-container {
+.hero__wrapper {
   width: 60%;
 }
 
-.hero-title {
+.hero__title {
   margin: 2rem 0;
 }
 
-.icons-div {
+.icons {
   margin-top: 2rem;
   display: flex;
   flex-direction: row;
@@ -23,11 +23,11 @@
   color: white;
 }
 
-.icon-link {
+.icons__link {
   color: gray;
   transition: all 0.5s ease;
 }
 
-.icon-link:hover {
+.icons__link:hover {
   color: white;
 }
