@@ -6,10 +6,11 @@
   align-items: center;
 }
 
-.about-container {
+.about__container {
   margin: 2rem;
   width: 60%;
 }
+
 .experience-list {
   list-style: none;
   padding: 0;

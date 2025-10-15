@@ -1,10 +1,9 @@
 import "./styles/about.css";
-import { articleListData } from "../../data";
 
 export function About() {
   return (
     <section className="about">
-      <div className="about-container">
+      <div className="about__container">
         <h1>Experience</h1>
         <ul className="experience-list">
           <li>
