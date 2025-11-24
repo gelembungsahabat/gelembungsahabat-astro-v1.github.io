@@ -22,7 +22,7 @@ function App() {
   const [position, setPosition] = useState<Position>({ x: 50, y: 50 });
 
   const startScreenYRef = useRef(0);
-  const maxSectionIndex = 3;
+  const maxSectionIndex = 2;
 
   // for mouse hovering effect on background
   const handleMouseMove = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
